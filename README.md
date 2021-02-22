@@ -1,93 +1,73 @@
-# Scaffold for social media app with Ruby on Rails
+# Raven Social media website
 
-> This repo includes intial code for social media app with basic styling. Its purpose is to be a starting point for Microverse students.
+This project is a social mdia website build with Ruby on Rails.
 
-## Built With
+## About
 
-- Ruby v2.7.0
-- Ruby on Rails v5.2.4
+This project is a social mdia website
 
-## Live Demo
+It focuses on creating User with validations and associations on rails using Active Record, and create events.
 
-TBA
+In this project we:
+- Made a model for users.
+- Made a model for events.
+- Made a model for invitations
+- Made associations between the user and the event model.
+- Made associations for attendee and attended_event
 
+## Usage
 
-## Getting Started
+- Open a terminal
+- Clone the repo by typing that command `git clone https://github.com/vichuge/private-events.git` 
+- Run `bundle install` in your terminal
+- Run `db:migrate` in your terminal to migrate the database
+- Run `rails s`
+- Start adding users, and create events
 
-To get a local copy up and running follow these simple example steps.
+## Video link
+[Video:](https://www.loom.com/share/f052f8a997114a94955e89264668d5cd)
 
-### Prerequisites
+## Live demo
+[Just click here!](https://salty-woodland-00933.herokuapp.com/)
 
-Ruby: 2.6.3
-Rails: 5.2.3
-Postgres: >=9.5
+## Technologies
 
-### Setup
-
-Instal gems with:
-
-```
-bundle install
-```
-
-Setup database with:
-
-```
-   rails db:create
-   rails db:migrate
-```
-
-### Github Actions
-
-To make sure the linters' checks using Github Actions work properly, you should follow the next steps:
-
-1. On your recently forked repo, enable the GitHub Actions in the Actions tab.
-2. Create the `feature/branch` and push.
-3. Start working on your milestone as usual.
-4. Open a PR from the `feature/branch` when your work is done.
-
-
-### Usage
-
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-
-### Run tests
-
-```
-    rpsec --format documentation
-```
-
-> Tests will be added by Microverse students. There are no tests for initial features in order to make sure that students write all tests from scratch.
-
-### Deployment
-
-TBA
+- Ruby
+- Rails
+- SQLite3
+- VSCode
+- Bootstrap
 
 ## Authors
 
-TBA
+👤 **Denis Lafontant**
+
+- GitHub: [@icebox827](https://github.com/icebox827)
+- Twitter: [@heracles2k5](https://twitter.com/@heracles2k5)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/denis-lafontant/)
+
+👤 **Victor Pacheco**
+
+- GitHub: [@vichuge](https://github.com/vichuge)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/victor-pacheco-7946aab2/)
+- Twitter: [@Pachecofloresv](https://twitter.com/Pachecofloresv)
+
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!
+Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](issues/).
+Feel free to check the [issues page](https://github.com/vichuge/private-events/issues/3).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+### Acknowledgements
 
-TBA
+- Microverse
+- The Odin Project
 
 ## 📝 License
 
-TBA
-
+This project is [MIT](./LICENSE) licensed.
