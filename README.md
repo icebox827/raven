@@ -18,7 +18,7 @@ In this project we:
 ## Usage
 
 - Open a terminal
-- Clone the repo by typing that command `git clone https://github.com/vichuge/private-events.git` 
+- Clone the repo by typing that command `git clone https://github.com/icebox827/raven` 
 - Run `bundle install` in your terminal
 - Run `db:migrate` in your terminal to migrate the database
 - Run `rails s`
