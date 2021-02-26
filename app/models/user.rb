@@ -27,8 +27,8 @@ class User < ApplicationRecord
   end
 
   def accept_f_request
-    @friendship = Friendship.find_by(:receiver_id :current_user).find_by(frienship_params_2)
-    @friendship.status = :true
+    @friendship = Friendship.find_by(:receiver_id).find_by(frienship_params_2)
+    @friendship.status = true
     @friendship.update
   end
 
