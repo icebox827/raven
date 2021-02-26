@@ -64,6 +64,4 @@ ActiveRecord::Schema.define(version: 2021_02_26_171527) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "friendships", "users", column: "creator_id"
-  add_foreign_key "friendships", "users", column: "receiver_id"
 end

@@ -1,0 +1,16 @@
+<article class="timeline">
+    <h3>
+      Pending friendship request
+    </h3>
+    <ul class="f-requests">
+      <% @friendships.each do |f| %>
+      <li>
+        <%= form_with(model: @friendship, url: 'friendships/'+f.receiver_id.to_s, method: 'PATCH', local: true) do |form| %>
+          <%= form.hidden_field :creator_id, class: 'form-control', value: f.creator_id %>
+          <p><%= f.creator_id %></p>
+          <%= form.submit 'Accept', class: 'btn btn-primary' %>
+          <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </article>
