@@ -11,7 +11,6 @@
           <% end %>
           <%= form_with(url: 'friendships/'+f.id.to_s, method: 'DELETE', local: true) do |form| %>
             <%= form.hidden_field :creator_id, class: 'form-control', value: f.creator_id %>
-            <p><%= f.creator.name%></p>
             <%= form.submit 'Reject', class: 'btn btn-warning btn-block', data: { disable_with: "Reject"}%>
           <% end %>
         </li>
