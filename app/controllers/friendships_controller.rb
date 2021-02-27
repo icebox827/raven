@@ -1,5 +1,4 @@
 class FriendshipsController < ApplicationController
-  before_action :authenticate_user!
 
   def index
     @friendship = Friendship.new
@@ -28,7 +27,7 @@ class FriendshipsController < ApplicationController
     else
       flash[:alert] = 'Friendship rejected'
     end
-    redirect_to user_friendships_path
+    redirect_to friendships_path
   end
 
   def destroy
