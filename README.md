@@ -39,7 +39,7 @@ Ruby: 2.7.2 Rails: 6.1.1 Postgres: >=13
 
 - Ruby
 - Rails
-- SQLite3
+- PostgreSQL
 - VSCode
 - Bootstrap
 
