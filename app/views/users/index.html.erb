@@ -1,5 +1,27 @@
-<section class="users-section">
+<!-- <section class="users-section">
   <ul class="users-list">
     <%= render @users %>
+  </ul>
+</section> -->
+<section class="users-section">
+  <ul class="users-list">
+    <% User.all.each do |user| %>
+      <% unless user == current_user %>
+        <li>
+          <span class="profile-link">
+            <div class = 'container'>
+              <h1><%= link_to user.name,  user_path(user), class: 'profile-link' %></h1>
+              <%= render 'friendships/friend_request', user: user %>
+              <% Friendship.all.each do |r| %>
+                <% if user == r %>
+                  <%= render 'friendships/accept_request', user: user, submit_text: 'Accept' %>
+                  <%= render 'friendships/reject_request', user: user, submit_text: 'Reject' %>
+                <% end %>
+              <% end %>
+            </div>
+          </span>
+        </li>
+      <% end %>
+    <% end %>
   </ul>
 </section>

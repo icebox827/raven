@@ -1,4 +1,6 @@
 class FriendshipsController < ApplicationController
+  before_action :authenticate_user!
+  
   def index
     @friendship = Friendship.new
     @friendships = Friendship.where(receiver_id: current_user).where(status: false)
@@ -6,17 +8,17 @@ class FriendshipsController < ApplicationController
   end
 
   def create
-    @friendship = Friendship.new
-    @friendship.creator_id = current_user
+    # @friendship = Friendship.new
+    # @friendship.creator_id = current_user
+    @friendship = Friendship.new(creator_id: current_user.id)
     @friendship.receiver_id = params[:receiver_id]
     @friendship.status = false
 
     if @friendship.save
-      flash[:notice] = 'Friendship created successfully'
+      flash[:notice] = 'Invite created successfully'
     else
-      flash[:alert] = 'Friendship is not created, try again'
+      flash[:alert] = 'Invite is not created, try again'
     end
-    redirect_to friendship_path
   end
 
   def update
