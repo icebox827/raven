@@ -13,37 +13,5 @@
       </li>
       <% end %>
     </ul>
-    <ul class="f-requests">
-      <% @friendships.each do |f| %>
-      <li>
-        <%= form_with(url: 'friendships/'+f.id.to_s, method: 'DELETE', local: true) do |form| %>
-          <%= form.hidden_field :creator_id, class: 'form-control', value: f.creator_id %>
-          <p><%= f.creator_id %></p>
-          <%= form.submit 'reject' %>
-          <% end %>
-      </li>
-      <% end %>
-    </ul>
   </article> -->
-  <section class="users-section">
-    <ul class="users-list">
-      <% User.all.each do |user| %>
-        <% unless user == current_user %>
-          <li>
-            <span class="profile-link">
-              <div class = 'container'>
-                <h1><%= link_to user.name,  user_path(user), class: 'profile-link' %></h1>
-                <%= render 'friendships/friend_request', user: user %>
-                <% Friendship.all.each do |r| %>
-                  <% if user == r %>
-                    <%= render 'friendships/accept_request', user: user, submit_text: 'Accept' %>
-                    <%= render 'friendships/reject_request', user: user, submit_text: 'Cancel' %>
-                  <% end %>
-                <% end %>
-              </div>
-            </span>
-          </li>
-        <% end %>
-      <% end %>
-    </ul>
-  </section>
+ 

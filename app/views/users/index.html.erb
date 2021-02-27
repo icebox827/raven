@@ -12,10 +12,10 @@
             <div class = 'container'>
               <h1><%= link_to user.name,  user_path(user), class: 'profile-link' %></h1>
               <%= render 'friendships/friend_request', user: user %>
-              <% Friendship.all.each do |r| %>
-                <% if user == r %>
-                  <%= render 'friendships/accept_request', user: user, submit_text: 'Accept' %>
-                  <%= render 'friendships/reject_request', user: user, submit_text: 'Reject' %>
+              <% Friendship.all.each do |request| %>
+                <% if user == request %>
+                  <%= render 'friendships/accept_request', user: user %>
+                  <%= render 'friendships/reject_request', user: user %>
                 <% end %>
               <% end %>
             </div>
