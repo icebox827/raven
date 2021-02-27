@@ -1,6 +1,6 @@
 class FriendshipsController < ApplicationController
   skip_before_action :verify_authenticity_token
-  
+
   def index
     @friendship = Friendship.new
     @friendships = Friendship.where(receiver_id: current_user).where(status: false)
