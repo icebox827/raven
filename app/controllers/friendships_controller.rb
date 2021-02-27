@@ -1,6 +1,6 @@
 class FriendshipsController < ApplicationController
   before_action :authenticate_user!
-  
+
   def index
     @friendship = Friendship.new
     @friendships = Friendship.where(receiver_id: current_user).where(status: false)

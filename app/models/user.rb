@@ -12,5 +12,4 @@ class User < ApplicationRecord
 
   has_many :friendships, dependent: :destroy, foreign_key: :creator_id
   has_many :inverse_friendships, dependent: :destroy, class_name: :Friendships, foreign_key: :receiver_id
-
 end
