@@ -28,7 +28,7 @@ class FriendshipsController < ApplicationController
     else
       flash[:alert] = 'Friendship rejected'
     end
-    redirect_to friendships_path
+    redirect_to user_friendships_path
   end
 
   def destroy

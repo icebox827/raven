@@ -1,8 +1,0 @@
-<%= form_with(model: @friendship, url: friendship_path(user), method: 'put', local: true, class: 'mx-auto') do |form| %>
-  <div>
-    <%= form.hidden_field :user_id, value: user.id, class: 'form-control' %>
-    <div class="">
-      <%= form.submit 'Accept', class: 'btn btn-warning btn-block', data: { disable_with: "Accepted"} %>
-    </div>
-  </div>
-<% end %>
