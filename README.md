@@ -10,10 +10,15 @@ It focuses on creating User with validations and associations on rails using Act
 
 In this project we:
 - Made a model for users.
-- Made a model for events.
-- Made a model for invitations
-- Made associations between the user and the event model.
-- Made associations for attendee and attended_event
+- Made a model for posts.
+- Made a model for comments.
+- Made a model for frienships.
+- Made associations between the user and the friendship model.
+- Made associations for creator and receiver of friend request.
+
+## Prerequisites
+
+Ruby: 2.7.2 Rails: 6.1.1 Postgres: >=13
 
 ## Usage
 
@@ -57,7 +62,7 @@ In this project we:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/vichuge/private-events/issues/3).
+Feel free to check the [issues page](https://github.com/icebox827/raven/issues/3).
 
 ## Show your support
 
