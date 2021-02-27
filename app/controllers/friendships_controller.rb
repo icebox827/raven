@@ -32,10 +32,11 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.find_by(receiver_id: current_user.id, creator_id: params[:user_id])
+    @friendship = Friendship.new(creator_id: current_user.id)
+    @friendship.receiver_id = params[:receiver_id]
+    @friendship.status = true
 
     if @friendship.destroy
-      redirect_to user_path(current_user.id)
       flash[:notice] = 'Friend request rejected'
     else
       flash[:alert] = 'Oops there is a problem'
