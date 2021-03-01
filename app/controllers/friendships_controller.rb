@@ -33,7 +33,7 @@ class FriendshipsController < ApplicationController
 
   def destroy
     @friendship = Friendship.find(params[:friendship_id])
-    
+
     if @friendship.destroy
       flash[:notice] = 'Friend request rejected'
     else
