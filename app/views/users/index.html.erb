@@ -5,7 +5,7 @@
 </section> -->
 <section class="users-section">
   <ul class="users-list">
-    <% User.all.each do |user| %>
+    <% @users.each do |user| %>
       <% unless user == current_user %>
         <li>
           <span class="profile-link">
