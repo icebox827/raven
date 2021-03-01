@@ -22,7 +22,6 @@ default: &default
   host: localhost
   encoding: unicode
   username: postgres
-  # vichuge password: admin1234
   password: admin1234
 
 development:
