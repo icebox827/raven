@@ -1,4 +1,5 @@
 AllCops:
+  SuggestExtensions: false
   Exclude:
     - "db/**/*"
     - "bin/*"
@@ -50,7 +51,7 @@ Layout/MultilineMethodCallIndentation:
 Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 Layout/EndOfLine:
-  EnforcedStyle: crlf
+  EnforcedStyle: lf
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
