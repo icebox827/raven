@@ -50,7 +50,7 @@ Layout/MultilineMethodCallIndentation:
 Layout/EmptyLinesAroundBlockBody:
   Enabled: false
 Layout/EndOfLine:
-  EnforcedStyle: lf
+  EnforcedStyle: crlf
 Lint/RaiseException:
   Enabled: false
 Lint/StructNewOverride:
