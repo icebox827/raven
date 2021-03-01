@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    # @users = User.joins('INNER JOIN friendships ON users.id=creator_id').where('friendships.creator_id != users.id or friendships.receiver_id != users.id')
   end
 
   def show

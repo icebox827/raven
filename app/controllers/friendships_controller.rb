@@ -2,7 +2,7 @@ class FriendshipsController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def index
-    @friendship = Friendship.new
+    # @friendship = Friendship.new
     @friendships = Friendship.where(receiver_id: current_user).where(status: false)
     @inverse_friendships = Friendship.where(creator_id: current_user).where(status: false)
   end
@@ -32,15 +32,13 @@ class FriendshipsController < ApplicationController
   end
 
   def destroy
-    @friendship = Friendship.new(creator_id: current_user.id)
-    @friendship.receiver_id = params[:receiver_id]
-    @friendship.status = true
-
+    @friendship = Friendship.find(params[:friendship_id])
+    
     if @friendship.destroy
       flash[:notice] = 'Friend request rejected'
     else
       flash[:alert] = 'Oops there is a problem'
     end
-    redirect_to user_path(current_user.id)
+    redirect_to friendships_path
   end
 end

@@ -140,7 +140,6 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.1.1)
-    remotipart (1.4.4)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -232,7 +231,6 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.12)
   rails (~> 5.2.4)
-  remotipart
   rspec
   rubocop
   sass-rails (~> 5.0)
