@@ -30,11 +30,8 @@ Ruby: 2.7.2 Rails: 6.1.1 Postgres: >=13
 - Run `rails s`
 - Start adding users, and create events
 
-## Video link
-[Video:](https://www.loom.com/share/f052f8a997114a94955e89264668d5cd)
-
 ## Live demo
-[Just click here!](https://salty-woodland-00933.herokuapp.com/)
+[Just click here!]()
 
 ## Technologies
 
