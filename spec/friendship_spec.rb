@@ -20,7 +20,7 @@ describe Friendship do
                            password: '123123')
 
       f = Friendship.create(creator_id: user1.id, receiver_id: user2.id, status: false)
-      Friendship.update(status: true)
+      f.update(status: true)
       expect(Friendship.find(f.id).id).to eql(Friendship.last.id)
     end
   end
@@ -33,7 +33,8 @@ describe Friendship do
                            password: '123123')
 
       f = Friendship.create!(creator_id: user1.id, receiver_id: user2.id, status: false)
-      Friendship.destroy(Friendship.find(f.id).id)
+
+      expect(f.destroy!).to eql(f)
     end
   end
 end
