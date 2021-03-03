@@ -20,6 +20,7 @@ class FriendshipsController < ApplicationController
     else
       flash[:alert] = 'Invite is not created, try again'
     end
+    redirect_to users_path
   end
 
   def update
