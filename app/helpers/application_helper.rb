@@ -15,12 +15,4 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
-
-  def my_friends
-    @accepted_friends = Friendship.create(creator_id: current_user.id, receiver_id: params[:receiver_id], status: true)
-  end
-
-  def invite_friends
-    @invited_friends = Friendship.create(creator_id: current_user.id, receiver_id: params[:receiver_id], status: false)
-  end
 end
