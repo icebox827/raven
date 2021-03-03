@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   def timeline_posts
     users = [current_user.id]
     unless Friendship.find_by(creator_id: current_user.id, status: true).nil?
-      users << Friendship.find_by(creator_id: current_user.id, status: true).reciever_id
+      users << Friendship.find_by(creator_id: current_user.id, status: true).receiver_id
     end
     unless Friendship.find_by(receiver_id: current_user.id, status: true).nil?
       users << Friendship.find_by(receiver_id: current_user.id, status: true).creator_id

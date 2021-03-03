@@ -2,6 +2,7 @@
   <ul class="users-list">
     <% @users.each do |user| %>
       <% unless user == current_user %>
+      
         <li>
           <span class="profile-link">
             <div class = 'container'>
@@ -10,6 +11,7 @@
             </div>
           </span>
         </li>
+      
       <% end %>
     <% end %>
   </ul>
