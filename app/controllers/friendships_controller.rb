@@ -15,7 +15,11 @@ class FriendshipsController < ApplicationController
     @friendship.receiver_id = params[:receiver_id]
     @friendship.status = false
 
-    if @friendship.save
+    @inverse_friendship = Friendship.new(receiver_id: current_user.id)
+    @inverse_friendship.receiver_id = params[:receiver_id]
+    @inverse_friendship.status = false
+
+    if @friendship.save && @inverse_friendship.save
       flash[:notice] = 'Invite created successfully'
     else
       flash[:alert] = 'Invite is not created, try again'
