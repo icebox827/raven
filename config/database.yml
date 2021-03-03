@@ -22,7 +22,7 @@ default: &default
   host: localhost
   encoding: unicode
   username: postgres
-  password: admin1234
+  password: $0l01985Deni$
   # admin1234
 
 development:
