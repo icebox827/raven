@@ -1,0 +1,24 @@
+<section class="user-section"> 
+  <article class=" ">
+    <h3>Pending friendship request</h3>
+      <ul class="f-requests">
+        <% @friendships.each do |f| %>
+        <% if row_creator(f) && f.creator_id != current_user.id %>
+          <li>
+            <%= form_with(url: 'friendships/'+f.id.to_s, method: 'PATCH', local: true) do |form| %>
+              <%= form.hidden_field :friendship_id, class: 'form-control', value: f.id %>
+              <%= form.hidden_field :creator_id, class: 'form-control', value: f.creator_id %>
+              <p><%= f.creator.name %></p>
+              <%= form.submit 'Accept', class: 'btn btn-warning btn-block', data: { disable_with: "Accepted"}%>
+            <% end %>
+            <%= form_with(url: 'friendships/'+f.id.to_s, method: 'DELETE', local: true) do |form| %>
+              <%= form.hidden_field :friendship_id, class: 'form-control', value: f.id %>
+              <%= form.hidden_field :creator_id, class: 'form-control', value: f.creator_id %>
+              <%= form.submit 'Reject', class: 'btn btn-warning btn-block', data: { disable_with: "Rejected"}%>
+            <% end %>
+          </li>
+        <% end %>
+        <% end %>
+      </ul>
+  </article>
+</section>

@@ -1,0 +1,19 @@
+<section class="users-section">
+  <ul class="users-list">
+    <% @users.each do |user| %>
+      <% unless user == current_user %>
+      <% unless my_friends.include?(user) %>
+        <li>
+          <span class="profile-link">
+            <div class = 'container'>
+              <h1><%= link_to user.name,  user_path(user), class: 'profile-link' %></h1>
+              <%= render 'friendships/friend_request', user: user %>
+            </div>
+          </span>
+        </li>
+        <% end %>
+      <% end %>
+    <% end %>
+  </ul>
+  <%= @userscontroller %>
+</section>
