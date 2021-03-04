@@ -40,8 +40,10 @@ class FriendshipsController < ApplicationController
 
   def destroy
     @friendship = Friendship.find(params[:friendship_id])
+    @next = (params[:friendship_id].to_i + 1)
+    @friendship2 = Friendship.find(@next)
 
-    if @friendship.destroy
+    if @friendship.destroy && @friendship2.destroy
       flash[:notice] = 'Friend request rejected'
     else
       flash[:alert] = 'Oops there is a problem'
