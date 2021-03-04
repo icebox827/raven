@@ -15,13 +15,18 @@
 # gem 'pg'
 #
 default: &default
-  adapter: postgresql
-  encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  username: postgres
+  password: $0l01985Deni$
+  # admin1234
 
 development:
+  
   <<: *default
   database: ror_social_scaffold_development
 
@@ -58,6 +63,7 @@ development:
 test:
   <<: *default
   database: ror_social_scaffold_test
+  
 
 # As with config/secrets.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
