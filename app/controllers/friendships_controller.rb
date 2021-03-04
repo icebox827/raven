@@ -29,7 +29,8 @@ class FriendshipsController < ApplicationController
 
   def update
     @friendship = Friendship.where(creator_id: params[:creator_id], receiver_id: current_user, status: false)
-    if @friendship.update(status: true)
+    @friendship2 = Friendship.where(creator_id: current_user, receiver_id: params[:creator_id], status: false)
+    if @friendship.update(status: true) && @friendship2.update(status: true)
       flash[:notice] = 'Friendship accepted'
     else
       flash[:alert] = 'Friendship rejected'

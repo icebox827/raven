@@ -26,7 +26,10 @@ module ApplicationHelper
     all_friends.include?(user)
   end
 
-  def creator(user)
-    
+  def row_creator(user)
+    f1 = Friendship.find_by(creator_id: user.creator_id, receiver_id: user.receiver_id)
+    f2 = Friendship.find_by(creator_id: user.receiver_id, receiver_id: user.creator_id)
+
+    f1.id < f2.id
   end
 end
