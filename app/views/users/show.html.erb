@@ -1,7 +1,7 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
   <% unless my_friends.include?(@user) %>
-    <% if friend?(@user) %>
+    <% unless friend?(@user) %>
       <%= render 'friendships/friend_request', user: @user %>
     <% end %>
   <% end %>
