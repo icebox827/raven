@@ -15,4 +15,14 @@ module ApplicationHelper
       link_to('Like!', post_likes_path(post_id: post.id), method: :post)
     end
   end
+
+  def my_friends
+    requested_friends = current_user.friendships.map { |friendship| friendship.receiver if friendship.status == false }
+    accepted_friends = current_user.friendships.map { |friendship| friendship.creator if friendship.status == true }
+    requested_friends.compact + accepted_friends.compact
+  end
+
+  def friend?(user)
+    my_friends.include?(user)
+  end
 end

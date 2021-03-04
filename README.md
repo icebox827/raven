@@ -10,31 +10,34 @@ It focuses on creating User with validations and associations on rails using Act
 
 In this project we:
 - Made a model for users.
-- Made a model for events.
-- Made a model for invitations
-- Made associations between the user and the event model.
-- Made associations for attendee and attended_event
+- Made a model for posts.
+- Made a model for comments.
+- Made a model for frienships.
+- Made associations between the user and the friendship model.
+- Made associations for creator and receiver of friend request.
+
+## Prerequisites
+
+Ruby: 2.7.2 Rails: 6.1.1 Postgres: >=13
 
 ## Usage
 
 - Open a terminal
 - Clone the repo by typing that command `git clone https://github.com/icebox827/raven` 
 - Run `bundle install` in your terminal
+- Run `db:create` in your terminal to create the database
 - Run `db:migrate` in your terminal to migrate the database
 - Run `rails s`
 - Start adding users, and create events
 
-## Video link
-[Video:](https://www.loom.com/share/f052f8a997114a94955e89264668d5cd)
-
 ## Live demo
-[Just click here!](https://salty-woodland-00933.herokuapp.com/)
+[Just click here!]()
 
 ## Technologies
 
 - Ruby
 - Rails
-- SQLite3
+- PostgreSQL
 - VSCode
 - Bootstrap
 
@@ -57,7 +60,7 @@ In this project we:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/vichuge/private-events/issues/3).
+Feel free to check the [issues page](https://github.com/icebox827/raven/issues/3).
 
 ## Show your support
 

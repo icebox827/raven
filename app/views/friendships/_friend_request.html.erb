@@ -1,0 +1,10 @@
+<% unless user == current_user %>
+  <%= form_with(url: friendships_path,  method: 'POST', local: true) do |form| %>
+    <div class="forms mb-4">
+      <%= form.hidden_field :receiver_id, class: 'form-control', value: user.id %>
+      <div class="actions">
+        <%= form.submit 'Invite', class: 'btn btn-primary mt-2', data: { disable_with: "Sent" }%>
+      </div>
+    </div>
+  <% end %>
+<% end %>
