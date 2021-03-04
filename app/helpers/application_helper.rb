@@ -26,7 +26,7 @@ module ApplicationHelper
     all_friends.include?(user)
   end
 
-  def method(yep)
+  def creator(user)
     
   end
 end
