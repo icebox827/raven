@@ -22,7 +22,5 @@ module ApplicationHelper
     requested_friends.compact + accepted_friends.compact
   end
 
-  def friend?(user)
-    all_friends.include?(user)
-  end
+  
 end
