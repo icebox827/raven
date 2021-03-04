@@ -16,7 +16,7 @@ class FriendshipsController < ApplicationController
     @friendship.status = false
 
     @inverse_friendship = Friendship.new(receiver_id: current_user.id)
-    @inverse_friendship.receiver_id = params[:receiver_id]
+    @inverse_friendship.creator_id = params[:receiver_id]
     @inverse_friendship.status = false
 
     if @friendship.save && @inverse_friendship.save
