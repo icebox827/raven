@@ -1,9 +1,7 @@
 <section class="user-section">
   <h2><%= "Name: #{@user.name}" %></h2>
-  <% unless my_friends.include?(@user) %>
-    <% unless friend?(@user) %>
-      <%= render 'friendships/friend_request', user: @user %>
-    <% end %>
+  <% if friend?(@user) %>
+    <%= render 'friendships/friend_request', user: @user %>
   <% end %>
   <article class="timeline">
     <h3>Recent posts:</h3>
