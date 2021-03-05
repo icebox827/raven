@@ -22,8 +22,10 @@ module ApplicationHelper
     requested_friends.compact + accepted_friends.compact
   end
 
-  def friend?(user)
-    all_friends.include?(user)
+  def friend?(_user)
+    requested_friends = current_user.friendships.map { |friendship| friendship.receiver if friendship.status == false }
+    accepted_friends = current_user.friendships.map { |friendship| friendship.creator if friendship.status == true }
+    requested_friends.compact + accepted_friends.compact
   end
 
   def row_creator(user)
