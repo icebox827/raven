@@ -17,8 +17,8 @@ module ApplicationHelper
   end
 
   def my_friends
-    requested_friends = current_user.friendships.map { |friendship| friendship.receiver if friendship.status == false }
-    accepted_friends = current_user.friendships.map { |friendship| friendship.creator if friendship.status == true }
+    requested_friends = current_user.friendships.map(&:receiver)
+    accepted_friends = current_user.friendships.map(&:creator)
     requested_friends.compact + accepted_friends.compact
   end
 
