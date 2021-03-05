@@ -1,6 +1,6 @@
 module FriendshipsHelper
-  def confirm_friend(user)
-    @friendship = current_user.friendships_received.find { |friendship| friendship.user == user }
+  def confirm_friend
+    @friendship = current_user.friends.find { |friendship| friendship.user == user }
     @friendship.status = true
     @friendship.save
   end

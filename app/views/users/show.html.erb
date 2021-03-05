@@ -3,7 +3,7 @@
   <% unless my_friends.include?(@user) %>
     <%= render 'friendships/friend_request', user: @user %>
   <% end %>
-  <% unless confirm_friend.include?(@user) %>
+  <% unless confirm_friend %>
     <%= render 'friendships/unfriend', user: @user %>
   <% end %>
   <article class="timeline">
