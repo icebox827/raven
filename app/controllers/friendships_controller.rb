@@ -5,8 +5,6 @@ class FriendshipsController < ApplicationController
   def index
     @friendships = Friendship.where(['creator_id = ? or receiver_id = ?', current_user,
                                      current_user]).where(status: false)
-
-    
   end
 
   def create

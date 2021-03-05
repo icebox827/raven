@@ -2,7 +2,6 @@
   <h2><%= "Name: #{@user.name}" %></h2>
   <% unless friend?(@user) %>
     <%= render 'friendships/friend_request', user: @user %>
-    <%= render 'friendships/unfriend', user: @user %>
   <% end %>
 
   <article class="timeline">
