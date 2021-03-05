@@ -11,7 +11,7 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
 
   has_many :friendships, dependent: :destroy, foreign_key: :creator_id
-  has_many :inverse_friendships, -> { where status: false }, class_name: :Friendships, foreign_key: :receiver_id
+  has_many :inverse_friendships, dependent: :destroy, class_name: :Friendships, foreign_key: :receiver_id
   has_many :friend_requests, through: :inverse_friendships
 
   has_many :confirmed_friendships, -> { where status: true }, class_name: :Friendships
