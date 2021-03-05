@@ -3,14 +3,11 @@ class FriendshipsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    # @friendship = Friendship.new
     @friendships = Friendship.where(['creator_id = ? or receiver_id = ?', current_user,
                                      current_user]).where(status: false)
   end
 
   def create
-    # @friendship = Friendship.new
-    # @friendship.creator_id = current_user
     @friendship = Friendship.new(creator_id: current_user.id)
     @friendship.receiver_id = params[:receiver_id]
     @friendship.status = false
