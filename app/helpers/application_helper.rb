@@ -23,7 +23,7 @@ module ApplicationHelper
   end
 
   def friend?(user)
-    all_friends.include?(user)
+    my_friends.include?(user)
   end
 
   def row_creator(user)

@@ -3,6 +3,9 @@
   <% unless my_friends.include?(@user) %>
     <%= render 'friendships/friend_request', user: @user %>
   <% end %>
+  <% unless confirm_friend.include?(@user) %>
+    <%= render 'friendships/unfriend', user: @user %>
+  <% end %>
   <article class="timeline">
     <h3>Recent posts:</h3>
     <ul class="posts">
