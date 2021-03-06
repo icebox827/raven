@@ -21,8 +21,7 @@ default: &default
   adapter: postgresql
   host: localhost
   encoding: unicode
-  username: postgres
-  password: $0l01985Deni$
+  
   # admin1234
 
 development:
