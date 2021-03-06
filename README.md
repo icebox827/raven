@@ -31,7 +31,7 @@ Ruby: 2.7.2 Rails: 6.1.1 Postgres: >=13
 - Start adding users, and create events
 
 ## Live demo
-[Just click here!]()
+[Just click here!](https://powerful-peak-59867.herokuapp.com/users/sign_in)
 
 ## Technologies
 
