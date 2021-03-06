@@ -22,7 +22,7 @@ Ruby: 2.7.2 Rails: 6.1.1 Postgres: >=13
 
 ## Usage
 
-- Open a terminal
+- Open a terminal.
 - Clone the repo by typing that command `git clone https://github.com/icebox827/raven` 
 - Run `bundle install` in your terminal
 - Run `db:create` in your terminal to create the database
